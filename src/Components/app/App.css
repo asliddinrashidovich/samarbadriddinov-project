@@ -1,0 +1,7 @@
+.filter {
+    width: 100%;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    margin-bottom: 30px;
+    background-color: #ededed;
+}

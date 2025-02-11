@@ -1,0 +1,10 @@
+.search input {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #999;
+    font-size: 17px;
+    border-radius: 3px;
+}
+.search input::placeholder {
+    font-size: 17px;
+}

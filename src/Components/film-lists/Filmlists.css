@@ -1,0 +1,59 @@
+.filmlists {
+    width: 100%;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    padding: 40px 20px;
+    background-color: #ededed;
+    margin-bottom: 30px;
+}
+.filmlists ul li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 1px solid #000;   
+}
+.filmlists ul li h2 {
+    font-size: 18px;
+}
+.filmlists .count {
+    margin-right: 50px;
+}
+.filmlists .stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.filmlists .stats .icon {
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    margin-left: 6px;
+    border-radius: 3px;
+    background-color: #ededed;
+    cursor: pointer;
+}
+.filmlists .stats .icon i {
+    pointer-events: none;
+}
+.filmlists .stats .eye {
+    color: gold;
+}
+.filmlists .stats .delete {
+    color: red;
+}
+.filmlists .stats .favorite {
+    color: inherit;
+    background-color: transparent;
+}
+.visibility {
+    visibility: hidden;
+}
+.favorite {
+    color: gold;
+}
+.hidden {
+    display: none !important;
+}

@@ -1,0 +1,28 @@
+.add-movie {
+    width: 100%;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    margin-bottom: 30px;
+    background-color: #ededed;
+}
+.add-movie form {
+    display: flex;
+    margin-top: 10px;
+}
+.add-movie input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    font-size: 17px;
+    border-radius: 3px;
+}
+.add-movie input::placeholder {
+    font-size: 17px;
+}
+.add-movie button {
+    padding: 10px;
+    border: 2px solid #555;
+    font-size: 17px;
+    border-radius: 3px;
+    background-color: #fff;
+}

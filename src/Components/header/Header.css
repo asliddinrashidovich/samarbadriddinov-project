@@ -1,0 +1,12 @@
+.header {
+    width: 100%;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    margin-bottom: 30px;
+    background-color: #ededed;
+}
+.header h1 {
+    text-transform: uppercase;
+    margin: 10px;
+    font-size: 28px;
+}

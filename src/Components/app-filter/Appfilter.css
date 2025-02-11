@@ -1,0 +1,28 @@
+.appfilter {
+    display: flex;
+    margin-top: 15px;
+}
+.appfilter .link {  
+    padding: 7px;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    border-right: 2px solid #000;
+    border-left: 2px solid #000;
+    background-color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+.first {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right-width: 1px;
+}
+.last {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-right-width: 1px;
+}
+.active {
+    background-color: #000 !important;
+    color: #fff;
+}
