@@ -7,12 +7,8 @@ import Search from '../search-panel/Search'
 import './App.css'
 
 function App() {
-  
   const localData = JSON.parse(localStorage.getItem('list')) ? JSON.parse(localStorage.getItem('list')) : [];
   const [data, setData] = useState(localData);
-  const [all, setAll] = useState(data);
-  const [favor, setFavor] = useState(data);
-  const [most, setMost] = useState(data);
 
   
   // set to local storage
@@ -69,34 +65,48 @@ function App() {
     document.getElementById('secondBtn').classList.remove('active')
     document.getElementById('lastBtn').classList.remove('active')
 
-    setAll(data)
-    console.log('asliddin')
+    setData((prev) => {
+      return prev.map((movie)=> {
+        if(movie.favorite) {
+          return {...movie, search: true}
+        } else {
+          return {...movie, search: true}
+        }
+      })
+    })
   }
   
   function favoriteFilmsFunc(val) {
     val.target.classList.add('active')
     document.getElementById('firstBtn').classList.remove('active')
     document.getElementById('lastBtn').classList.remove('active')
-    setFavor((prev) => {
-      return prev.filter((item)=> {
-        return item.favorite
+
+    setData((prev) => {
+      return prev.map((movie)=> {
+        if(movie.favorite) {
+          return {...movie, search: true}
+        } else {
+          return {...movie, search: false}
+        }
       })
     })
-    setData(favor)
-    
-    console.log(favor)
+
   }
   
   function mostWatchedFilmsFunc(val) {
     val.target.classList.add('active')
     document.getElementById('firstBtn').classList.remove('active')
     document.getElementById('secondBtn').classList.remove('active')
-    setMost((prev)=> {
-      return prev.sort((film1, film2)=> {
-        return film2.watched - film1.watched
+
+    setData((prev) => {
+      return prev.map((movie)=> {
+        if(+movie.watched > 1000000000) {
+          return {...movie, search: true}
+        } else {
+          return {...movie, search: false}
+        }
       })
     })
-    setData(most)
   }
 
   // the number  of liked films
